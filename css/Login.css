@@ -182,12 +182,16 @@ form .loginbtn {
 }
 
 @media only screen and (max-width: 768px) {
- 
+  body{
+    background-size: auto;
+    overflow-y: hidden;
+  }
   .container {
+    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px 5px;
+    margin: 0 5px;
     padding: 15px 0;
   }
   .intro img{
