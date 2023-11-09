@@ -1,0 +1,34 @@
+.intro{
+  order: 2;
+}
+.credentials div:nth-child(1){
+  justify-content: flex-start;
+}
+.credentials div:nth-child(2){
+  margin-top: unset;
+}
+.credentials div:nth-child(3) form{
+  gap: 5px;
+}
+.terms{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+form a{
+  font-size: 14px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: #1c3b68;
+}
+@media only screen and (max-width: 768px){
+  .intro{
+    order: 1;
+  }
+  .credentials{
+    order: 2;
+  }
+  .credentials div:nth-child(1){
+    justify-content: center;
+  }
+}

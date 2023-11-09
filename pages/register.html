@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CDN LINK  -->
+  <script src="https://kit.fontawesome.com/08b4a0d388.js" crossorigin="anonymous"></script>
+  <!-- CSS LINK  -->
+  <link rel="stylesheet" href="/css/Login.css">
+  <link rel="stylesheet" href="/css/register.css">
+  <!-- FAVICON LINK  -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <title>Wa-Saves</title>
+</head>
+<body>
+  <div class="container">
+    <div class="intro">
+      <img src="/img/register.jpg" alt="Login page">
+    </div>
+    <div class="credentials">
+      <div>
+        <p>Member?<a href="/index.html">Login</a></p>
+      </div>
+      <div>
+        <h1>Project f!</h1>
+        <p>Welcome to the community</p>
+      </div>
+      <div>
+        <form action="/login" method="post">
+          <label for="username"></label>
+          <input type="text" id="username" name="username" placeholder="Enter username" required>
+          <label for="phone"></label>
+          <input type="tel" id="phone" name="phone" placeholder="WhatsApp number" pattern="[0-9]+" required>
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <div class="password-container">
+              <input type="password" id="password" name="password" placeholder="Password" required autocomplete="new-password">
+              <span class="eye-icon" onclick="togglePasswordVisibility('password')">👁️</span>
+          </div>
+          <div class="password-container">
+              <input type="password" id="password" name="password" placeholder="Confirm Password" required autocomplete="new-password">
+              <span class="eye-icon" onclick="togglePasswordVisibility('password')">👁️</span>
+          </div>
+          <label for="terms & conditions" class="terms">
+            <input type="checkbox" required>
+            <a href="#">Terms & Conditions</a>
+          </label>
+          <div class="loginbtn"><button type="submit">Sign up</button></div>
+      </form>
+      </div>
+    </div>
+  </div>
+  <script src="/js/script.js"></script>
+</body>
+</html>

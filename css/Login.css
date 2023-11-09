@@ -59,6 +59,9 @@ body {
   font-size: 14px;
   padding: 10px;
 }
+.credentials div:nth-child(1) a{
+  margin-left: 5px;
+}
 .credentials div:nth-child(2){
  display: flex;
  flex-direction: column;
@@ -72,8 +75,7 @@ body {
   margin: 0 auto;
   width: 60%;
 }
-.credentials input[type=text],
-input[type=password]{
+.credentials input{
   padding: 10px;
   border-radius: 8px;
   outline: none;
