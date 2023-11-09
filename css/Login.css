@@ -111,19 +111,13 @@ form .loginbtn {
   font-weight: bold;
   transition: all 0.3s linear;
 }
-
 .loginbtn button:hover {
   background-color: #1a3764;
   border: solid #1a3764;
 }
-
-/* Password container styles */
 .password-container {
   position: relative;
-  /* width: calc(100% - 30px); */
 }
-
-/* Password input styles */
 #password {
   width: 100%;
   padding: 10px;
@@ -131,8 +125,6 @@ form .loginbtn {
   border: 1px solid #ffffff;
   border-radius: 8px;
 }
-
-/* Eye icon styles */
 .eye-icon {
   position: absolute;
   right: 5px;
