@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root{
+  --primary:#132744;
+  --secondary:#dfdfdf;
+  --text-color: #000000;
+}
+html{
+  font-family: 'popins', sans-serif;
+  background-color: var(--secondary);
+}
+body {
+  background-image: linear-gradient(45deg,rgba(255, 206, 206, 0.733), rgba(167, 187, 247, 0.863)), url(/img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1300px;
+  padding: 5px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(255,255,255, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  width : 500px;
+}
+.intro img{
+  width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  user-select: none;
+}
+.credentials div:nth-child(1){
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  padding: 10px;
+}
+.credentials div:nth-child(2){
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ margin-top: 40px;
+}
+.credentials div:nth-child(3) form{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+}
+.credentials input[type=text],
+input[type=password]{
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: solid #ffffff;
+}
+form div {
+  display: flex;
+  font-size: 14px;
+  padding: 8px 0;
+  justify-content: flex-end;
+}
+
+form div a {
+  color: #132744;
+}
+
+form button {
+  width: 40%;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+form .loginbtn {
+  all: unset;
+  display: flex;
+  justify-content: center;
+}
+
+.loginbtn button {
+  background-color: #132744;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.18);
+  border: solid #132744;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s linear;
+}
+
+.loginbtn button:hover {
+  background-color: #1a3764;
+  border: solid #1a3764;
+}
+
+/* Password container styles */
+.password-container {
+  position: relative;
+  /* width: calc(100% - 30px); */
+}
+
+/* Password input styles */
+#password {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+}
+
+/* Eye icon styles */
+.eye-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  color: #132744;
+}
+.share{
+  text-align: center;
+}
+.socials{
+  display: flex;
+  justify-content: center;
+}
+.socials ul{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.fab, .fa-brands{
+  font-size: 20px;
+}
+.fa-facebook {
+  background: linear-gradient(90deg, #3b5998, #1877f2); /* Facebook gradient */
+  -webkit-background-clip: text; /* Apply gradient to text (for some browsers) */
+  color: transparent; /* Make the text transparent */
+}
+
+.fa-twitter {
+  background: linear-gradient(90deg, #1c9ceb, #1da1f2);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.fa-instagram {
+  background: linear-gradient(90deg, #833ab4, #c32aa3); 
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.fa-whatsapp {
+  background: linear-gradient(90deg, #08a040, #128C7E);
+  -webkit-background-clip: text;
+  color: transparent; 
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 5px;
+    padding: 15px 0;
+    top: 0;
+  }
+  .intro img{
+    width: 60%;
+    border-radius: 50%;
+  }
+  .intro,
+  .credentials {
+    width: 100%;
+  }
+  .credentials div:nth-child(1){
+    justify-content: center;
+  }
+  .credentials div:nth-child(2) {
+    margin-top: 20px;
+  }
+  .credentials div:nth-child(2) h1{
+    font-size: 27px;
+  }
+  .credentials div:nth-child(3) form {
+    width: 80%;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  .socials ul {
+    justify-content: center;
+  }
+
+  .fa-facebook,
+  .fa-twitter,
+  .fa-instagram,
+  .fa-whatsapp {
+    font-size: 18px;
+  }
+}
