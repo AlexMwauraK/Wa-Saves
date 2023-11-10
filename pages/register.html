@@ -26,27 +26,30 @@
         <p>Welcome to the community</p>
       </div>
       <div>
-        <form action="/login" method="post">
+      <form action="/login" method="post">
           <label for="username"></label>
           <input type="text" id="username" name="username" placeholder="Enter username" required>
           <label for="phone"></label>
-          <input type="tel" id="phone" name="phone" placeholder="WhatsApp number" pattern="[0-9]+" required>
+          <input type="tel" id="phone" name="phone" placeholder="WhatsApp number" pattern="[0-9]+" minlength="10" maxlength="10" required>
           <label for="email"></label>
           <input type="email" id="email" name="email" placeholder="Email" required>
           <div class="password-container">
             <input type="password" id="password" name="password" placeholder="Password" required autocomplete="new-password">
             <span class="eye-icon" onclick="togglePasswordVisibility('password')">👁️</span>
-        </div>
-        <div class="password-container">
-            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password">
+          </div>
+          <p id="passwordMismatch" style="color: red; display: none; font-size: 12px;">Passwords do not match!</p>
+          <div class="password-container">
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password" oninput="checkPasswordMatch()">
             <span class="eye-icon" onclick="togglePasswordVisibility('confirmPassword')">👁️</span>
-        </div>
-          <label for="terms & conditions" class="terms">
+          </div>
+          <label for="terms" class="terms">
             <input type="checkbox" required>
             <a href="#">Terms & Conditions</a>
           </label>
-          <div class="loginbtn"><button type="submit">Sign up</button></div>
-      </form>
+          <div class="loginbtn">
+            <button type="submit" id="signupButton">Sign up</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

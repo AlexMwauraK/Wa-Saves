@@ -1,7 +1,21 @@
-// Show or hide password
 function togglePasswordVisibility(passwordInputId) {
   const passwordInput = document.getElementById(passwordInputId);
   passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+}
+
+function checkPasswordMatch() {
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirmPassword').value;
+  const mismatchMessage = document.getElementById('passwordMismatch');
+  const signUpButton = document.getElementById('signupButton');
+
+  if (password === confirmPassword) {
+    mismatchMessage.style.display = 'none';
+    signUpButton.style.display = 'block';
+  } else {
+    mismatchMessage.style.display = 'block';
+    signUpButton.style.display = 'none';
+  }
 }
 //social media share site
 function toggleShareOptions() {
