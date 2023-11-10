@@ -35,21 +35,21 @@
           </div>
   
           <div>
-              <a href="/recover-password">Forgot password?</a>
+              <a href="/pages/forgotpass.html" target="_blank">Forgot password?</a>
           </div>
           <div class="loginbtn"><button type="submit">Login</button></div>
       </form>
       </div>
-      <div class="share">
+      <div class="share" onclick="toggleShareOptions()">
         <p><i class="fa-solid fa-share-nodes"></i> share</p>
       </div>
-      <div class="socials">
-        <ul>
-          <li><i class="fa-brands fa-facebook"></i></li>
-          <li><i class="fab fa-twitter"></i></li>
-          <li><i class="fab fa-instagram"></i></li>
-          <li><i class="fa-brands fa-whatsapp"></i></li>
-        </ul>
+      <div class="socials" id="socials">
+          <ul>
+              <li><a href="#" onclick="shareOnFacebook()"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#" onclick="shareOnTwitter()"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#" onclick="shareOnInstagram()"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#" onclick="shareOnWhatsApp()"><i class="fa-brands fa-whatsapp"></i></a></li>
+          </ul>
       </div>
     </div>
   </div>
