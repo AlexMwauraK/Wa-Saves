@@ -42,3 +42,13 @@ function shareOnWhatsApp() {
   var url = "https://api.whatsapp.com/send?text=" + encodeURIComponent(window.location.href);
   window.open(url, '_blank');
 }
+//Website visitors
+ // Fetch the current count from CountAPI and update the span element
+ fetch('https://api.countapi.xyz/get/whatsappsave.netlify.app/visits')
+ .then(response => response.json())
+ .then(data => {
+     document.getElementById('visits').textContent = data.value;
+ })
+ .catch(error => {
+     console.error('Error fetching CountAPI data:', error);
+ });
