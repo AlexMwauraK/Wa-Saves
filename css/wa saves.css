@@ -121,7 +121,6 @@ html, body {
 .details{
   display: flex;
   flex-direction: column;
-  height: 80%;
   justify-content: center;
 }
 .details h1{
@@ -133,8 +132,25 @@ html, body {
   font-family: 'Agbalumo', sans-serif;
   color: #128C7E;
 }
-
-
+.details .users{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-top: 6em;
+  gap: 4em;
+  font-size: 14px;
+}
+.details .users p{
+  display: flex;
+  align-items: end;
+}
+.details .users a{
+  background-color: #128C7E;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+}
 @media only screen and (max-width: 768px) {
   .header {
     height: auto;
@@ -165,5 +181,10 @@ nav, .logins{
 
   .details h1 {
     text-align: center;
+  }
+  .details .users{
+    justify-content: center;
+    padding-top: 1em;
+    gap: 2em;
   }
 }
