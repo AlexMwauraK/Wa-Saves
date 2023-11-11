@@ -43,12 +43,30 @@ function shareOnWhatsApp() {
   window.open(url, '_blank');
 }
 //Website visitors
- // Fetch the current count from CountAPI and update the span element
- fetch('https://api.countapi.xyz/get/whatsappsave.netlify.app/visits')
- .then(response => response.json())
- .then(data => {
-     document.getElementById('visits').textContent = data.value;
- })
- .catch(error => {
-     console.error('Error fetching CountAPI data:', error);
- });
+const count = document.getElementById("count");
+totalUpdate();
+
+function totalUpdate() {
+    fetch("https://api.countapi.xyz/hit/swapnilsparsh/?amount=1")
+        .then((res) => res.json())
+        .then((res) => {
+            count.innerHTML = res.value;
+            val(count, 0, res.value, 1000);
+        });
+}
+
+function val(obj, start, end, duration) {
+    let startingStamp = null;
+
+    function step(st) {
+        if (!startingStamp) startingStamp = st;
+
+        const progress = Math.min((st - startingStamp) / duration, 1);
+        obj.innerHTML = Math.floor(progress * (end - start) + start);
+
+        if (progress < 1)
+            window.requestAnimationFrame(step);
+    }
+
+    window.requestAnimationFrame(step);
+}
